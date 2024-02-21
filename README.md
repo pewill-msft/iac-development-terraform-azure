@@ -106,9 +106,9 @@ Review the content of the repository. The repository contains a `devcontainer.js
 	}
 }
 ```
-The Dev Container is based on 'Ubuntu' and includes `Azure CLI` and `Terraform` as well as some VS Code extensions for working with Azure and Terraform.
+The Dev Container is based on `Ubuntu` and includes `Azure CLI` and `Terraform` as well as some VS Code extensions for working with Azure and Terraform.
 
-The repository also contains a simple Terraform code to create a resource group and an Azure SQL database in Azure. The Terraform code is located in `src` folder.
+The repository also contains a simple Terraform code to create a resource group and an Azure SQL database in Azure. The Terraform code is located in `infa` folder.
 
 With the repository open in VS Code, you can either edit the files dirctly and push to GitHub or start the development environment using a container by entering the following command in the VS Code command palette (Ctrl+Shift+P) and select `Dev Containers: Reopen in Container`
 
@@ -150,6 +150,11 @@ terraform apply main.tfplan
 ```
 
 
+Verify that the resource group is created
 
+```bash
+az group list --output table
 
+```
+You can also review the resources using the Azure Resources explorer view in VS Code by selecting the `Azure: Focus on Resources View` from the command palette (Ctrl+Shift+P)
 

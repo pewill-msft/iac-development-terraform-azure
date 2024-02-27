@@ -14,11 +14,6 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "version" {
-  description = "The version of the SQL Server"
-  default     = "12.0"
-}
-
 variable "admin_login" {
   description = "The name of the administrator to login to the SQL Server"
   type        = string

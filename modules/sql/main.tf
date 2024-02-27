@@ -13,7 +13,7 @@ resource "azurerm_sql_server" "sqlserver" {
   name                         = azurecaf_name.sqlserver_name.result
   resource_group_name          = var.resource_group_name
   location                     = var.resource_group_location
-  version                      = var.version
+  version                      = "12.0"
   administrator_login          = var.admin_login
   administrator_login_password = var.admin_password
   tags                         = { env : var.env }
